@@ -1,5 +1,6 @@
 #header {
     padding: 1em;
+    text-align: center;
 }
 
 span {
@@ -7,7 +8,7 @@ span {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #555555;
     /* Green */
     border: none;
     color: white;
@@ -19,8 +20,26 @@ button {
 }
 
 input[type=text] {
-    width: 25%;
+    width: 75%;
+    max-width: 300px;
     padding: 5px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+#result {
+    font-size: 14;
+    font-weight: bold;
+}  
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
 }
