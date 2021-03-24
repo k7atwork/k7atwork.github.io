@@ -1,12 +1,21 @@
 <html>
     <head>
         <script src='./USI_Validate.js'></script>
+        <style>
+            #content, span 
+            {
+                padding: 1em;
+            }
+
+        </style>
     </head>
     <body>
-        <div>
+        <div id='header' style="text-align: center;">
+            <h1>USI Validator</h1>
+        </div>
+        <div id='content'>
             <span>Input USI:</span>
             <input id='USI' type="text">
-            <br/>
             <button onclick="CheckUSI();">Click Me</button>
         </div>
     </body>
