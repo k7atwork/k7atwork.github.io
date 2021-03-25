@@ -31,15 +31,31 @@ function VerifyKey(key) {
 }
 
 function CheckUSI() {
-    var USI = document.getElementById('USI');
+    
+    var USI = document.getElementById('USI').value;
     var result = document.getElementById('result');
 
-    if (VerifyKey(USI.value)) {
-        result.innerHTML = 'USI is Valid'
+    if (USI.length != 10)  {
+        result.innerHTML = 'USI should be 10 chars long.';
+        result.setAttribute('class','invalid');
+        return;
+    }
+
+    for(i=1; i<USI.length; i++) {
+if (validChars.indexOf(USI[i]) < 0) {
+    result.innerHTML = 'Invalid characters found !.';
+    result.setAttribute('class','invalid');
+    return;
+    }
+    }
+
+    
+    if (VerifyKey(USI)) {
+        result.innerHTML = 'USI is Valid';
         result.setAttribute('class','valid');
     }
     else {
-        result.innerHTML = 'USI is Invalid'
+        result.innerHTML = 'USI is Invalid';
         result.setAttribute('class','invalid');
     }
 }
