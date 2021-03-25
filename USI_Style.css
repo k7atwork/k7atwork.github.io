@@ -32,7 +32,7 @@ input[type=text] {
     padding: 5px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 table {
